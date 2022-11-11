@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+   
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+a{
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+}
+
+
+p{
+    margin: 0;
+}
+
+
+
+
+/* topography */
+.title{
+    font-weight: 800;
+    font-size: 1.2rem;
+    
+    color: #000000;
+}
+.movie-plot{
+    color: #6b7280;
+    font-size: 0.65rem;
+    line-height: 1.1rem;
+    margin-top: 1em;
+}
+
+.movie-gerne{
+    font-size: 0.65rem;
+    color: #111827;
+}
+
+.search{
+    text-align: center;
+    display: flex;
+    max-width: 65%;
+    border: 1px solid black;
+    margin: 0 auto;
+    justify-content: center;
+    /* position: relative; */
+    top: 220px;
+}
+
+.watchlist-btn p{
+    margin-left: 2px;
+}
+
+h3 {
+    margin: 0;
+}
+
+.movie-rating{
+    font-size: .7em;
+}
+
+input{
+    width: 100%;
+    height: 100%;
+    background-color: #f9fafbd6;
+    padding: 1em 0 1em 0;
+    margin-bottom: 1em;
+    margin: 0;
+    background-color: #000000c6;
+    color: #F9FAFB;
+    opacity: 1;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+.search button{
+    border: none;
+    background-color: #000000c6;
+    opacity: 1;
+    color: #F9FAFB;
+    
+   
+    
+}
+
+.movie-gerne button{
+    background-color: inherit;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
+.movie-gerne button ,.search button:hover{
+    cursor: pointer;
+}
+
+.watchlist-btn{
+    letter-spacing: .5px;
+}
+
+.watch{
+    margin-left: 2px;
+}
+
+
+
+/* layout */
+
+
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.watchlist{
+   
+    display: flex;
+    align-items: center;
+}
+
+.instructions{
+    color:#111827a7;
+}
+
+
+.hero{
+    padding: 5em;
+    display: flex;
+    border: 2px solid ;
+    width: 100%;
+    justify-content: center;
+    gap: 1em;
+    color: white;
+    font-weight: 800;
+    background-color: #00000099;
+    margin: 0 auto;
+    background-image: url('https://wallpapercave.com/wp/wp1945897.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    gap: .7em;
+    /* position: absolute; */
+}   
+.movie-info{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+.movie-info-wrapper{
+    margin-left: 1em;
+}
+.search-results{
+    max-width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   
+}
+
+.current-movie{
+    display: flex;
+    border-top: 1.5px solid #e5e7eb;
+    margin: 0;
+    justify-content: flex-start;
+    padding: 1em 0 1em 0;
+    min-width: 100%;
+    
+   
+}
+img{
+    max-width:150px ;
+}
+
+.movie-gerne{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    margin-top: 1em;
+    align-items: center;
+    gap: 1em;
+
+   
+}
+
+
+
+
