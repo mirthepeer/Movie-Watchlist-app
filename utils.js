@@ -10,7 +10,7 @@ const searchBar = document.getElementById('search-bar')
 
 // Gets all matching movies to the search input and filters out thier Imdb Ids.
 export async function getMoviesId(){
-    const response = await fetch(`http://www.omdbapi.com/?apikey=${apikey}&s=${searchBar.value}&plot='short'&page=${page}`)
+    const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&s=${searchBar.value}&plot='short'&page=${page}`)
     const movies = await response.json()
     let movieIDs = []
     for(let movie of movies.Search){
@@ -25,7 +25,7 @@ export async function getResults(){
     const movieIDs = await getMoviesId()
     let movieResults = []
     for(let id of movieIDs){
-        const response = await fetch(`http://www.omdbapi.com/?apikey=${apikey}&i=${id}`)
+        const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&i=${id}`)
         const movie = await response.json()
         movieResults.push(movie)
         
