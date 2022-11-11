@@ -145,12 +145,12 @@ input:focus{
     gap: 1em;
     color: white;
     font-weight: 800;
-    background-color: #00000099;
     margin: 0 auto;
     background-image: url('https://wallpapercave.com/wp/wp1945897.jpg');
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
+    background-color: rgba(43, 38, 38, 0.899);
     gap: .7em;
     /* position: absolute; */
 }   
