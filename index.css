@@ -46,12 +46,20 @@ p{
 .search{
     text-align: center;
     display: flex;
-    max-width: 65%;
-    border: 1px solid black;
+    max-width: 55%;
     margin: 0 auto;
     justify-content: center;
-    /* position: relative; */
-    top: 220px;
+    position: absolute;
+    bottom: -20;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+ 
+}
+
+.instructions {
+    background-color: instructions;
 }
 
 .watchlist-btn p{
@@ -68,14 +76,15 @@ h3 {
 
 input{
     width: 100%;
-    height: 100%;
-    background-color: #f9fafbd6;
+    font-size: 1em;
     padding: 1em 0 1em 0;
     margin-bottom: 1em;
     margin: 0;
     background-color: #000000c6;
     color: #F9FAFB;
     opacity: 1;
+    bottom: 0;
+    left: 0;
 }
 
 input:focus{
@@ -135,8 +144,17 @@ input:focus{
     color:#111827a7;
 }
 
-
 .hero{
+    position: relative;
+    background-image: url('https://wallpapercave.com/wp/wp1945897.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(43, 38, 38, 0.899);
+    margin-bottom: 2em;
+}
+
+.headings{
     padding: 5em;
     display: flex;
     border: 2px solid ;
@@ -146,11 +164,7 @@ input:focus{
     color: white;
     font-weight: 800;
     margin: 0 auto;
-    background-image: url('https://wallpapercave.com/wp/wp1945897.jpg');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: multiply;
-    background-color: rgba(43, 38, 38, 0.899);
+  
     gap: .7em;
     /* position: absolute; */
 }   
@@ -162,9 +176,10 @@ input:focus{
 }
 .movie-info-wrapper{
     margin-left: 1em;
+    width: 100%;
 }
 .search-results{
-    max-width: 65%;
+    max-width: 50%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -197,6 +212,10 @@ img{
     gap: 1em;
 
    
+}
+
+.watchlist-btn.flex-container{
+    margin-left: auto;
 }
 
 

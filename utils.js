@@ -55,27 +55,29 @@ export function generateHTML(movies){
     !myList.some(e => e.imdbID === movie.imdbID) ? (buttonState = 'add', buttonIcon = '+') :(buttonState = 'remove', buttonIcon='-')
         
 
-        html += ` <div class='current-movie'>
-        <div class='poster'>
-            <img src = ${movie.Poster} alt='movie img'>
-        </div>
-        <div class='movie-info-wrapper'>
-            <div class='movie-info'>
-                <p class='title'>${movie.Title}</p>
-                <p class='movie-rating'>⭐${movie.imdbRating}</p>
+        html += ` 
+        
+        <div class='current-movie'>
+            <div class='poster'>
+                <img src = ${movie.Poster} alt='movie img'>
             </div>
-            <div class='movie-gerne'>
-                <p>${movie.Runtime}</p>
-                <p>${movie.Genre}</p>
-                <div class='watchlist-btn flex-container'>
-                    <button class='btn' id= '${movie.imdbID}' data-${buttonState}='${movie.imdbID}'>${buttonIcon} </button>
-                    <p>Watchlist</p>
+            <div class='movie-info-wrapper'>
+                <div class='movie-info'>
+                    <p class='title'>${movie.Title}</p>
+                    <p class='movie-rating'>⭐${movie.imdbRating}</p>
+                </div>
+                <div class='movie-gerne'>
+                    <p>${movie.Runtime}</p>
+                    <p>${movie.Genre}</p>
+                    <div class='watchlist-btn flex-container'>
+                        <button class='btn' id= '${movie.imdbID}' data-${buttonState}='${movie.imdbID}'>${buttonIcon} </button>
+                        <p>Watchlist</p>
+                    </div>
+                </div>
+                <div class="movie-plot">
+                    <p>${movie.Plot}</p>
                 </div>
             </div>
-            <div class="movie-plot">
-                <p>${movie.Plot}</p>
-            </div>
-        </div>
     </div>
 `
         
