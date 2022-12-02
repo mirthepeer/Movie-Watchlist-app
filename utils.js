@@ -4,14 +4,23 @@ const apikey = '4689b8df'
 let page = 1
 const searchBar = document.getElementById('search-bar')
 
+const loader = document.getElementById('loader')
+
+export function addLoader(){
+    loader.style.display = 'block'
+}
 
 
-
+export function RemoveLoader(){
+    loader.style.display= 'none'
+}
 
 // Gets all matching movies to the search input and filters out thier Imdb Ids.
 export async function getMoviesId(){
+    addLoader()
     const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&s=${searchBar.value}&plot='short'&page=${page}`)
     const movies = await response.json()
+    RemoveLoader()
     let movieIDs = []
     for(let movie of movies.Search){
         movieIDs.push(movie.imdbID)
