@@ -3,8 +3,17 @@
 import {generateHTML} from './utils.js'
 
 function renderWatchList(watchlistData){
-    document.getElementById('watchlist-results').innerHTML = generateHTML(watchlistData)
-    console.log(watchlistData)
+    if(watchlistData.length>0){
+        document.getElementById('watchlist-results').innerHTML = generateHTML(watchlistData)
+    }
+    else{
+        document.getElementById('watchlist-results').innerHTML = `
+        <h1 class="instructions white">Your Watchlist Seems Empty</h1>
+        <h1><a class='Dark-bg' href="index.html">Search for movies 🔍</a></h3>
+        `
+    }
+   
+    
 }
 
 
@@ -13,7 +22,12 @@ if('watchlist' in localStorage){
     if(watchlistData.length>0){
         renderWatchList(watchlistData)
     }else{
-        document.getElementById('watchlist-results').innerHTML = `<h1>Your watchlist seems empty</h1>`
+        document.getElementById('watchlist-results').innerHTML = 
+        `
+        <h1 class="instructions white">Your Watchlist Seems Empty</h1>
+        <h1><a class='Dark-bg' href="index.html">Search for movies 🔍</a></h3>
+        `
+        
     }
     
 
@@ -24,6 +38,7 @@ document.addEventListener('click', (e)=>{
         handleRemove(e.target.dataset.remove)
         let watchlistData = JSON.parse(localStorage.getItem('watchlist'))
         renderWatchList(watchlistData)
+
     }
 
 })

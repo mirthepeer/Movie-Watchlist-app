@@ -71,7 +71,7 @@ export function generateHTML(movies){
     let buttonIcon 
     !myList.some(e => e.imdbID === movie.imdbID) ? (buttonState = 'add', buttonIcon = '+') :(buttonState = 'remove', buttonIcon='-')
         
-    loader.style.display = 'block'
+
         html += ` 
         
         <div class='current-movie'>
@@ -99,6 +99,6 @@ export function generateHTML(movies){
 `
         
     })
-    loader.style.display = 'none'
+   
     return html
 }
