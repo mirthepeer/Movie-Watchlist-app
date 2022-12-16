@@ -80,15 +80,17 @@ h3 {
 }
 
 .Dark-bg{
-    background-color: rgb(60, 53, 53);
+    background-color: rgb(15, 14, 14);
     padding: .75em;
     border-radius: 10px;
     box-shadow: 10px 10px 20px;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     opacity: .85;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 200;
+    letter-spacing: 2px;
 
     
 }
@@ -186,6 +188,7 @@ input:focus{
     color: white;
     font-weight: 800;
     margin: 0 auto;
+    font-size: .75rem;
   
     /* gap: .7em; */
     /* position: absolute; */
