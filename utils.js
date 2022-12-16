@@ -31,22 +31,30 @@ export async function getMoviesId(){
 
 // Using the Ids returned from getMoviesId fuctction this fuction uses those ids and those ids are passed as a search query to get detailed info of a movie 
 export async function getResults(){
+    try{
     const movieIDs = await getMoviesId()
     let movieResults = []
     for(let id of movieIDs){
         const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&i=${id}`)
         const movie = await response.json()
         movieResults.push(movie)
-        
-        
     }
+        
+        
+    
     return movieResults
+}catch (error) {
+    return 'No results'
+  }
  }
 
 
  // generateHTML uses results from getResults function and usses that data to render out movie cards and takes moviesToRender Object that
 // contain all the movies as a parameter
 export function generateHTML(movies){
+    if (movies === 'No results') {
+        return '<p>No results</p>'
+      }
     let html = ''
 
     localStorage.setItem('movies', JSON.stringify(movies))
@@ -63,7 +71,7 @@ export function generateHTML(movies){
     let buttonIcon 
     !myList.some(e => e.imdbID === movie.imdbID) ? (buttonState = 'add', buttonIcon = '+') :(buttonState = 'remove', buttonIcon='-')
         
-
+    loader.style.display = 'block'
         html += ` 
         
         <div class='current-movie'>
@@ -91,5 +99,6 @@ export function generateHTML(movies){
 `
         
     })
+    loader.style.display = 'none'
     return html
 }
